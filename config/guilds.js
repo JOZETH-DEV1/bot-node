@@ -8,17 +8,14 @@
 // derecho sobre el servidor/canal/usuario > "Copiar ID".
 
 export const GUILD_CONFIG = {
-  // Servidor 1 — reemplaza la clave (ID del servidor) y los valores
-  '1352848330966827089': {
+  '1352848330966827089': { // Servidor 1 — con bienvenida
     welcomeChannelId: '1352848330966827091',
     raidAlertChannelId: '1539062705766277260',
   },
-
-  // Servidor 2
-  'REEMPLAZA_CON_ID_SERVIDOR_2': {
-    welcomeChannelId: 'REEMPLAZA_CON_CANAL_BIENVENIDA_2',
-    raidAlertChannelId: 'REEMPLAZA_CON_CANAL_ALERTA_RAID_2',
+  '1533223612377727086': { // Servidor 2 — SOLO anti-raid, sin bienvenida
+    raidAlertChannelId: '1539350644618436708',
   },
+};
 
   // Agrega más servidores aquí siguiendo el mismo patrón:
   // 'ID_DEL_SERVIDOR': {
