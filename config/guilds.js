@@ -9,7 +9,7 @@
 
 export const GUILD_CONFIG = {
   // Servidor 1 — reemplaza la clave (ID del servidor) y los valores
-  'REEMPLAZA_CON_ID_SERVIDOR_1': {
+  '1352848330966827089': {
     welcomeChannelId: '1352848330966827091',
     raidAlertChannelId: '1539062705766277260',
   },
