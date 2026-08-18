@@ -22,7 +22,6 @@ export const GUILD_CONFIG = {
   //   welcomeChannelId: 'ID_DEL_CANAL',
   //   raidAlertChannelId: 'ID_DEL_CANAL',
   // },
-};
 
 // Helper: devuelve la config de un servidor, o null si no está configurado
 export function getGuildConfig(guildId) {
