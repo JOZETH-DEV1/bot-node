@@ -1,13 +1,3 @@
-// config/guilds.js
-// Configuración específica por servidor (guild). Como jozethdevBot va a
-// vivir en más de un servidor, cada uno necesita sus propios IDs de canal
-// (welcome y raid alert pueden ser distintos en cada servidor, e incluso
-// un servidor puede no tener bienvenida y solo tener anti-raid).
-//
-// Cómo conseguir un ID: activa el Modo Desarrollador en Discord
-// (Ajustes de usuario > Avanzado > Modo Desarrollador), luego clic
-// derecho sobre el servidor/canal/usuario > "Copiar ID".
-
 export const GUILD_CONFIG = {
   // Servidor 1 — tiene bienvenida (con links de TikTok/YouTube) Y anti-raid
   '1352848330966827089': {
@@ -25,7 +15,7 @@ export const GUILD_CONFIG = {
   //   welcomeChannelId: 'ID_DEL_CANAL', // opcional: omite esta línea si no quieres bienvenida ahí
   //   raidAlertChannelId: 'ID_DEL_CANAL',
   // },
-
+}; // <--- 
 
 // Helper: devuelve la config de un servidor, o null si no está configurado
 export function getGuildConfig(guildId) {
