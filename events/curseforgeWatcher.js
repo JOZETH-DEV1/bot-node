@@ -10,14 +10,9 @@ const ADDON_URL = 'https://www.curseforge.com/minecraft-bedrock/addons/onetouch-
 const CHECK_INTERVAL_MS = 15 * 60 * 1000; // revisa cada 15 minutos
 
 // 👉 Cambia esto por el ID del canal del Servidor 1 donde quieres el aviso
-const ANNOUNCE_CHANNEL_ID = 'REEMPLAZA_CON_TU_CANAL_DE_ACTUALIZACIONES';
-const ANNOUNCE_GUILD_ID = 'REEMPLAZA_CON_ID_SERVIDOR_1';
+const ANNOUNCE_CHANNEL_ID = '1352848330966827091';
+const ANNOUNCE_GUILD_ID = '1539062705766277260';
 
-// Guarda en memoria cuál fue el último archivo anunciado, para no repetir avisos.
-// Nota: como esto vive solo en memoria, si Railway reinicia el proceso, en el
-// primer chequeo después de reiniciar puede "descubrir" el archivo actual como
-// si fuera nuevo. Es un trade-off aceptable para no complicar el proyecto con
-// una base de datos solo para esto.
 let lastAnnouncedFileId = null;
 
 async function fetchLatestFile() {
