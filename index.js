@@ -14,6 +14,7 @@ import 'dotenv/config';
 import { handleMessageForSpam } from './events/antiSpam.js';
 import { handleMemberJoin } from './events/welcome.js';
 import { registerRaidWatcher } from './events/antiRaid.js';
+import { registerCurseForgeWatcher } from './events/curseforgeWatcher.js';
 
 const client = new Client({
   intents: [
@@ -28,6 +29,7 @@ const client = new Client({
 
 client.once('ready', () => {
   console.log(`✅ ${client.user.tag} está en línea.`);
+  registerCurseForgeWatcher(client); // arranca la vigilancia de CurseForge
 });
 
 // --- Bienvenida ---
