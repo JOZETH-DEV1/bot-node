@@ -68,15 +68,15 @@ export function registerCurseForgeWatcher(client) {
 
 async function announceUpdate(client, file) {
   try {
-    const guild = client.guilds.cache.get(ANNOUNCE_GUILD_ID);
+    const guild = await client.guilds.fetch(ANNOUNCE_GUILD_ID).catch(() => null);
     if (!guild) {
-      console.warn('⚠️ No encontré el servidor configurado para el aviso de CurseForge.');
+      console.warn(`⚠️ No encontré el servidor (${ANNOUNCE_GUILD_ID}) configurado para el aviso de CurseForge.`);
       return;
     }
 
-    const channel = guild.channels.cache.get(ANNOUNCE_CHANNEL_ID);
+    const channel = await guild.channels.fetch(ANNOUNCE_CHANNEL_ID).catch(() => null);
     if (!channel) {
-      console.warn('⚠️ No encontré el canal configurado para el aviso de CurseForge.');
+      console.warn(`⚠️ No encontré el canal (${ANNOUNCE_CHANNEL_ID}) configurado para el aviso de CurseForge.`);
       return;
     }
 
